@@ -7,8 +7,8 @@
     <meta name="description" content="Mobile-friendly guest information for Tombstone Grand Hotel.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
 <script type="importmap">
 {
   "imports": {
@@ -24,85 +24,75 @@
 
     <!-- Header -->
     <header class="app-header">
-        <div class="header-bg-decoration"></div>
-        <div class="container">
-            
+        <div class="header-content container">
             <!-- Date, Time & Weather Bar -->
             <div class="top-info-bar">
                 <div class="date-time-box">
-                    <span id="currentDate" class="date-text">Loading...</span>
+                    <span id="currentDate" class="date-text">Loading Date...</span>
                     <span id="currentTime" class="time-text"></span>
                 </div>
                 <div id="weatherBox" class="weather-box">
                     <a href="https://www.google.com/search?q=weather+tombstone+az" target="_blank" class="weather-link">
-                        <span id="weatherIcon">🌤️</span>
-                        <span id="weatherTemp">--°F</span>
+                        <span id="weatherIcon">☀️</span>
+                        <span id="weatherTemp">Loading...</span>
                     </a>
                 </div>
             </div>
 
-            <h1>Tombstone Grand Hotel</h1>
-            <p class="subtitle">a Baymont by Wyndham</p>
+            <div class="brand-identity">
+                <h1>Tombstone Grand Hotel</h1>
+                <p class="subtitle">a Baymont by Wyndham</p>
+            </div>
             
             <div class="location-badge">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span>Tombstone, Arizona</span>
+                <span>580 W Randolph Way, Tombstone, AZ</span>
             </div>
 
             <div class="welcome-card">
                 <h2>Welcome</h2>
-                <p>We are delighted to have you with us. Please use this guide to explore our amenities and local Tombstone attractions.</p>
+                <p>Experience hometown hospitality in the heart of the Wild West.</p>
                 
                 <div class="action-buttons">
-                    <a href="https://www.wyndhamhotels.com/baymont/tombstone-arizona/tombstone-grand-hotel-a-baymont/overview?CID=LC:cfixxwa8fefdt79:58835&amp;iata=00093796" target="_blank" class="book-btn">
+                    <a href="https://www.wyndhamhotels.com/baymont/tombstone-arizona/tombstone-grand-hotel-a-baymont/overview" target="_blank" class="book-btn">
                         Book Now
                     </a>
-                    <a href="https://www.wyndhamhotels.com/baymont/tombstone-arizona/tombstone-grand-hotel-a-baymont/overview?CID=LC:cfixxwa8fefdt79:58835&amp;iata=00093796" target="_blank" class="gallery-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    <a href="https://www.wyndhamhotels.com/baymont/tombstone-arizona/tombstone-grand-hotel-a-baymont/overview" target="_blank" class="gallery-btn">
                         View Photos
                     </a>
                 </div>
 
                 <a href="https://g.page/r/CdMu_RAsng9VEAE/review" target="_blank" class="review-btn">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                    Review us on Google
+                    <span style="color:#fcd34d">★★★★★</span> &nbsp;Rate us on Google
                 </a>
             </div>
-
-            <!-- Scroll Hint Indicator -->
-            <div id="scrollHint" class="scroll-hint">
-                <span>Scroll to Explore</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
-            </div>
         </div>
+        <div class="baymont-accent-strip"></div>
     </header>
 
     <main class="container main-content">
         
         <!-- Essentials Section -->
         <section class="card accordion" id="essentials">
-            <button class="accordion-header" aria-expanded="false">
+            <button class="accordion-header" aria-expanded="true"> <!-- Default Open -->
                 <div class="header-left">
                     <div class="icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
                     </div>
-                    <span>Hotel Essentials</span>
+                    <span>Wi-Fi & Essentials</span>
                 </div>
                 <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="accordion-content">
                 <div class="content-wrapper">
                     <div class="wifi-box">
-                        <div class="wifi-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
-                        </div>
                         <div>
-                            <span class="wifi-label">FREE WI-FI ACCESS</span>
+                            <span class="wifi-label">FREE GUEST WI-FI</span>
                             <div class="wifi-details">
                                 <p>Network: <span class="badge">wyndhamwifi</span></p>
                                 <p>Password: <span class="badge">grandhotel</span></p>
-                                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                                    <strong>Issue?</strong> Call <a href="tel:8337463544" style="text-decoration: underline; color: var(--blue);">833-746-3544</a>
+                                <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #666;">
+                                    <strong>Support:</strong> <a href="tel:8337463544" style="text-decoration: underline;">833-746-3544</a>
                                 </p>
                             </div>
                         </div>
@@ -121,7 +111,7 @@
                     
                     <div class="info-row no-border">
                         <span>Front Desk</span>
-                        <a href="tel:0" class="phone-link">Dial 0 (In-room phone)</a>
+                        <a href="tel:0" class="phone-link">Dial 0</a>
                     </div>
                 </div>
             </div>
@@ -132,9 +122,9 @@
             <button class="accordion-header" aria-expanded="false">
                 <div class="header-left">
                     <div class="icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                     </div>
-                    <span>Room Help & Tips</span>
+                    <span>Room Help</span>
                 </div>
                 <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
@@ -142,37 +132,20 @@
                 <div class="content-wrapper">
                     
                     <div class="tip-group">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
-                            TV & Remote Issues
-                        </h4>
+                        <h4>TV & Remote</h4>
                         <ul>
-                            <li><strong>TV Input:</strong> Ensure TV is on <strong>HDMI 1</strong>.</li>
-                            <li><strong>Power:</strong> Check if the power cable behind the TV is plugged in tightly.</li>
-                            <li><strong>Not Working?</strong> Unplug the black DirecTV box behind the TV for 10 seconds, then plug back in.</li>
-                            <li><strong>Remote Tip:</strong> The box is mounted <em>behind</em> the TV. Point the remote specifically at the side/back of the TV for best signal.</li>
+                            <li><strong>Input:</strong> Ensure TV is on <strong>HDMI 1</strong>.</li>
+                            <li><strong>Remote:</strong> Point directly at the black box <em>behind</em> the TV.</li>
+                            <li><strong>Fix:</strong> Unplug black DirecTV box for 10s if stuck.</li>
                         </ul>
                     </div>
 
                     <div class="tip-group">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                            Microwave & Clock
-                        </h4>
+                        <h4>Amenities</h4>
                         <ul>
-                            <li><strong>Microwave Door:</strong> Has a Child Safety Lock. Press the <strong>Unlock</strong> button first, then open the door.</li>
-                            <li><strong>Alarm Clock USB:</strong> To charge via USB, ensure the side knob is set to <strong>FM</strong>.</li>
-                        </ul>
-                    </div>
-
-                    <div class="tip-group">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
-                            Keys & Ice Machines
-                        </h4>
-                        <ul>
-                            <li><strong>Room Keys:</strong> Keep away from mobile phones and credit cards to prevent deactivation.</li>
-                            <li><strong>Ice Machines:</strong> Located on both the 1st and 2nd floors.</li>
+                            <li><strong>Microwave:</strong> Press "Unlock" button before opening.</li>
+                            <li><strong>Clock USB:</strong> Set knob to 'FM' to enable charging.</li>
+                            <li><strong>Ice Machines:</strong> Available on 1st & 2nd floors.</li>
                         </ul>
                     </div>
                 </div>
@@ -186,28 +159,23 @@
                     <div class="icon-box">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
                     </div>
-                    <span>Free Breakfast</span>
+                    <span>Breakfast</span>
                 </div>
                 <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="accordion-content">
                 <div class="content-wrapper">
                     <div class="hours-badge">
-                        <span class="label">DAILY HOURS</span>
+                        <span class="label">SERVED DAILY</span>
                         <span class="time">6:30 AM — 9:30 AM</span>
                     </div>
                     
-                    <div class="amenity-grid small">
-                        <div class="amenity-item">Coffee & Juice</div>
-                        <div class="amenity-item">Yogurt</div>
-                        <div class="amenity-item">Waffles</div>
-                        <div class="amenity-item">Fresh Fruit</div>
-                        <div class="amenity-item">Bagels/Muffins</div>
-                        <div class="amenity-item">Hot Chocolate</div>
-                        <div class="amenity-item">Eggs & Sausage*</div>
-                        <div class="amenity-item">Biscuits & Gravy*</div>
-                    </div>
-                    <p class="footnote">*On select days</p>
+                    <ul class="simple-list">
+                        <li>Coffee, Juice & Hot Chocolate</li>
+                        <li>Waffles, Bagels & Muffins</li>
+                        <li>Yogurt & Fresh Fruit</li>
+                        <li>Eggs, Sausage & Biscuits/Gravy (Select Days)</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -219,69 +187,35 @@
                     <div class="icon-box">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path></svg>
                     </div>
-                    <span>Hotel Amenities</span>
+                    <span>Amenities</span>
                 </div>
                 <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="accordion-content">
                 <div class="content-wrapper">
                     
-                    <h4 class="section-subtitle">Property Features</h4>
                     <div class="amenity-grid">
                         <div class="amenity-item">
-                            <span class="emoji">🏊</span>
-                            <span>Outdoor Pool</span>
+                            <span>🏊 Pool</span>
                             <small>10AM - 10PM</small>
-                            <small>Towels on rack outside</small>
                         </div>
                         <div class="amenity-item">
-                            <span class="emoji">♨️</span>
-                            <span>Hot Tub</span>
+                            <span>♨️ Hot Tub</span>
                         </div>
                         <div class="amenity-item">
-                            <span class="emoji">🛍️</span>
-                            <span>Sundry Shop</span>
-                            <small>Guest Convenience Items Available 24 Hours</small>
-                            <small>Snacks, Drinks, Ice Cream, Frozen Food, Beer, and Select Wine</small>
-                            <small>Front Desk Assistance Available Anytime</small>
+                            <span>🛍️ Shop</span>
+                            <small>24/7 Snacks</small>
                         </div>
                         <div class="amenity-item">
-                            <span class="emoji">⚡</span>
-                            <span>EV Charging</span>
+                            <span>⚡ EV Charge</span>
                         </div>
-                        <div class="amenity-item">
-                            <span class="emoji">👔</span>
-                            <span>Guest Laundry</span>
-                        </div>
-                        <div class="amenity-item">
-                            <span class="emoji">💼</span>
-                            <span>Business Ctr</span>
-                        </div>
-                        <div class="amenity-item">
-                            <span class="emoji">🔥</span>
-                            <span>Fire Pit & BBQ</span>
-                            <small>Until 10:00 PM</small>
-                        </div>
-                        <div class="amenity-item">
-                            <span class="emoji">🐾</span>
-                            <span>Pet Friendly</span>
-                        </div>
-                    </div>
-
-                    <h4 class="section-subtitle">Parking & Accessibility</h4>
-                    <div class="amenity-grid">
-                        <div class="amenity-item text-only">Free Parking</div>
-                        <div class="amenity-item text-only">Bus/RV Parking</div>
-                        <div class="amenity-item text-only">Accessible Pool</div>
-                        <div class="amenity-item text-only">Accessible Entrance</div>
-                        <div class="amenity-item text-only">Accessible Routes</div>
                     </div>
 
                     <div class="beer-box">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 11h1a3 3 0 0 1 0 6h-1"></path><path d="M9 12v6"></path><path d="M13 12v6"></path><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 2 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.57-.5-2.5-.5Z"></path><path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"></path></svg>
+                        <div class="icon">🍷</div>
                         <div>
-                            <h5>Beer & Wine Available</h5>
-                            <p>Available for purchase at the sundry shop. Valid ID required.</p>
+                            <h5>Beer & Wine</h5>
+                            <p>Available at the Sundry Shop (24/7). ID required.</p>
                         </div>
                     </div>
                 </div>
@@ -295,23 +229,17 @@
                     <div class="icon-box">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
                     </div>
-                    <span>360° Virtual Tour</span>
+                    <span>Virtual Tour</span>
                 </div>
                 <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="accordion-content">
                 <div class="content-wrapper">
-                    <p class="intro-text">Explore our lobby, pool area, and guest rooms from anywhere.</p>
                     <div class="virtual-tour-card">
-                        <div class="tour-overlay">
-                            <a href="https://www.google.com/maps/@31.7215,-110.0684,3a,75y,90t/data=!3m7!1e1!3m5!1sAF1QipMbbG8k...!2e10!3e11!7i8000!8i4000" target="_blank">
-                                <span class="tour-btn-text">Start Tour</span>
-                            </a>
-                        </div>
+                        <a href="https://www.google.com/maps/@31.7215,-110.0684,3a,75y,90t/data=!3m7!1e1!3m5!1sAF1QipMbbG8k...!2e10!3e11!7i8000!8i4000" target="_blank" class="tour-link-overlay">
+                            <span class="tour-btn-text">Start 360° Tour</span>
+                        </a>
                     </div>
-                    <a href="https://www.google.com/maps/@31.7215,-110.0684,3a,75y,90t/data=!3m7!1e1!3m5!1sAF1QipMbbG8k...!2e10!3e11!7i8000!8i4000" target="_blank" class="full-width-btn primary">
-                        Open in Full Screen
-                    </a>
                 </div>
             </div>
         </section>
@@ -323,77 +251,21 @@
                     <div class="icon-box">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg>
                     </div>
-                    <span>Daily Services</span>
+                    <span>Housekeeping</span>
                 </div>
                 <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="accordion-content">
                 <div class="content-wrapper">
                     <div class="green-program-box">
-                        <h4>Wyndham Green Program</h4>
-                        <p>We are proud to participate in the Wyndham Green Program to support environmental sustainability. We offer full housekeeping service every <strong>3rd day</strong> of your stay.</p>
-                        <p><strong>Need service sooner?</strong> Please let the Front Desk know before you head out for the day, and we will be happy to service your room.</p>
+                        <h4>Wyndham Green</h4>
+                        <p>Full housekeeping is provided every <strong>3rd day</strong> to support sustainability.</p>
+                        <p style="margin-top:0.5rem"><strong>Need it sooner?</strong> Just ask the Front Desk!</p>
                     </div>
                     
                     <div class="amenity-request-box">
-                        <h4>Need Additional Items?</h4>
-                        <p>During your stay, if you need anything extra like towels, blankets, or toiletries, please let us know.</p>
-                        <div class="amenity-grid small">
-                            <div class="amenity-item">Towels</div>
-                            <div class="amenity-item">Toiletries</div>
-                            <div class="amenity-item">Coffee</div>
-                            <div class="amenity-item">Blankets</div>
-                        </div>
+                        <p><strong>Available on request:</strong> Towels, Toiletries, Coffee, Blankets.</p>
                         <a href="tel:0" class="small-btn full-width">Call Front Desk</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our History -->
-        <section class="card accordion">
-            <button class="accordion-header" aria-expanded="false">
-                <div class="header-left">
-                    <div class="icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"></path><path d="M10 2v20"></path><path d="M14 2v20"></path></svg>
-                    </div>
-                    <span>Our History</span>
-                </div>
-                <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="accordion-content">
-                <div class="content-wrapper">
-                    <p class="history-text">The Tombstone Grand Hotel stands as a modern tribute to the enduring spirit of the American West. Situated on a rise overlooking the historic town and the Dragoon Mountains beyond, our location offers the same breathtaking sunsets that cowboys and lawmen witnessed over a century ago.</p>
-                    <p class="history-text">As a proud member of the Baymont by Wyndham family, we blend the warmth of hometown hospitality with the reliability of a global brand.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Policies -->
-        <section class="card accordion">
-            <button class="accordion-header" aria-expanded="false">
-                <div class="header-left">
-                    <div class="icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <span>Policies</span>
-                </div>
-                <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="accordion-content">
-                <div class="content-wrapper">
-                    <div class="policy-card red">
-                        <h4>100% Smoke-Free Property</h4>
-                        <p>$250 fee for smoking in rooms.</p>
-                    </div>
-                    <div class="policy-card blue">
-                        <h4>Pet Policy</h4>
-                        <p>Pets allowed with nightly fee. Service animals stay free.</p>
-                        <p class="highlight">Pets allowed ONLY in downstairs rooms.</p>
-                    </div>
-                    <div class="policy-card amber">
-                        <h4>Important</h4>
-                        <p>No Elevator on property. Early check-in & late check-out available upon request.</p>
                     </div>
                 </div>
             </div>
@@ -406,58 +278,26 @@
                     <div class="icon-box">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
-                    <span>Local Attractions</span>
+                    <span>Local Area</span>
                 </div>
                 <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="accordion-content">
                 <div class="content-wrapper">
-                    
                     <div class="amenity-grid">
                         <a href="https://www.google.com/maps/search/?api=1&query=OK+Corral+Tombstone+AZ" target="_blank" class="amenity-item link-item">
                             <span>OK Corral</span>
-                            <small>Get Directions</small>
                         </a>
                         <a href="https://www.google.com/maps/search/?api=1&query=Boothill+Graveyard+Tombstone+AZ" target="_blank" class="amenity-item link-item">
                             <span>Boothill</span>
-                            <small>Graveyard</small>
                         </a>
                         <a href="https://www.google.com/maps/search/?api=1&query=Allen+Street+Tombstone+AZ" target="_blank" class="amenity-item link-item">
-                            <span>Allen Street</span>
-                            <small>Historic</small>
+                            <span>Allen St</span>
                         </a>
                         <a href="https://tombstonechamber.com/directory/places-to-eat-and-drink-in-tombstone-az/" target="_blank" class="amenity-item link-item">
                             <span>Dining</span>
-                            <small>Local Eats</small>
                         </a>
                     </div>
-
-                    <div class="links-list">
-                        <a href="https://tombstonechamber.com/tombstone-az-faqs-for-visitors/" target="_blank">Visitor FAQs</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Guest Reviews -->
-        <section class="card accordion">
-            <button class="accordion-header" aria-expanded="false">
-                <div class="header-left">
-                    <div class="icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                    </div>
-                    <span>Guest Reviews</span>
-                </div>
-                <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="accordion-content">
-                <div class="content-wrapper">
-                    <div class="review-item">
-                        <div class="stars">★★★★★</div>
-                        <p>"Great location right near the historic district. The breakfast was excellent and the staff was very helpful."</p>
-                        <span class="author">— Sarah M.</span>
-                    </div>
-                    <a href="https://g.page/r/CdMu_RAsng9VEAE/review" target="_blank" class="full-width-btn">Rate us on Google</a>
                 </div>
             </div>
         </section>
@@ -469,13 +309,12 @@
                     <div class="icon-box">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     </div>
-                    <span>Contact Information</span>
+                    <span>Contact</span>
                 </div>
                 <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="accordion-content">
                 <div class="content-wrapper">
-                    
                     <div class="contact-row">
                         <div class="contact-icon">📞</div>
                         <div>
@@ -483,83 +322,18 @@
                             <a href="tel:5204579507" class="contact-val">520-457-9507</a>
                         </div>
                     </div>
-                    
-                    <div class="contact-row">
-                        <div class="contact-icon">👔</div>
-                        <div>
-                            <span class="contact-label">Manager</span>
-                            <span class="contact-val">Ext. 411</span>
-                        </div>
-                    </div>
-
-                    <div class="contact-row">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <span class="contact-label">Front Desk Email</span>
-                            <a href="mailto:frontofficetgh@salinvestment.com" class="contact-val email">frontofficetgh@salinvestment.com</a>
-                        </div>
-                    </div>
-
-                    <div class="contact-row">
-                        <div class="contact-icon">👤</div>
-                        <div>
-                            <span class="contact-label">General Manager</span>
-                            <a href="mailto:58835@bywyndham.com" class="contact-val email">58835@bywyndham.com</a>
-                            <a href="tel:4807388056" class="contact-val" style="display:block; margin-top: 0.25rem; font-size: 1rem;">Cell: 480-738-8056</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-row">
-                        <div class="contact-icon">🏆</div>
-                        <div>
-                            <span class="contact-label">Wyndham Rewards</span>
-                            <a href="tel:18004661589" class="contact-val">1-800-466-1589</a>
-                        </div>
-                    </div>
-
                     <div class="contact-row">
                         <div class="contact-icon">📍</div>
                         <div>
                             <span class="contact-label">Address</span>
-                            <p class="contact-val" style="font-size: 1rem; line-height: 1.4;">
-                                580 W Allen St<br>
-                                PO Box 1730<br>
-                                Tombstone, AZ 85638
+                            <p class="contact-val" style="font-size: 0.95rem;">
+                                580 W Randolph Way<br>Tombstone, AZ 85638
                             </p>
                         </div>
                     </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Help & Maintenance -->
-        <section class="card accordion">
-            <button class="accordion-header" aria-expanded="false">
-                <div class="header-left">
-                    <div class="icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                    </div>
-                    <span>Help & Maintenance</span>
-                </div>
-                <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="accordion-content">
-                <div class="content-wrapper">
-                    <p class="intro-text">Need something fixed? Let us know.</p>
-                    
-                    <a href="https://forms.gle/Et1mTk1AGKLMQQHu6" target="_blank" class="maintenance-btn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        Request Maintenance
-                    </a>
-
-                    <div class="emergency-box">
-                        <h4>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                            Emergency
-                        </h4>
-                        <p>Medical/Security: Call <strong>911</strong></p>
-                        <p>Hotel Emergency: Dial <strong>0</strong></p>
+                    <div class="emergency-box" style="margin-top:1rem; border-top:1px solid #ddd; padding-top:1rem;">
+                        <p style="color:#d31145; font-weight:bold;">Emergency: Dial 0 or 911</p>
+                        <a href="https://forms.gle/Et1mTk1AGKLMQQHu6" target="_blank" style="text-decoration:underline; font-size:0.9rem; display:block; margin-top:0.5rem;">Request Maintenance</a>
                     </div>
                 </div>
             </div>
@@ -571,22 +345,12 @@
 
     </main>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" aria-label="Scroll to top">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
-    </button>
-
     <!-- Sticky Bottom Bar -->
     <div class="sticky-bar">
         <a href="tel:0" class="call-btn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            Using in-room phone? Dial 0 for desk
+            Dial Front Desk
         </a>
-    </div>
-
-    <!-- Interaction Helper Tip (Fades in/out) -->
-    <div id="interactionTip" class="interaction-tip">
-        👇 Scroll down & tap squares to view details
     </div>
 
     <script src="script.js"></script>
