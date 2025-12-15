@@ -63,6 +63,68 @@ a {
     position: relative;
 }
 
+/* --- Top Info Bar (Weather/Date) --- */
+.top-info-bar {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    font-size: 0.9rem;
+    backdrop-filter: blur(4px);
+}
+
+.date-time-box {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.date-text {
+    font-weight: 500;
+    opacity: 0.9;
+    font-size: 0.85rem;
+}
+
+.time-text {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+}
+
+.weather-box {
+    text-align: right;
+}
+
+.weather-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    background: rgba(0,0,0,0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.weather-link:hover {
+    background: rgba(0,0,0,0.4);
+}
+
+#weatherTemp {
+    font-size: 1.1rem;
+}
+
+#weatherIcon {
+    font-size: 1.25rem;
+}
+
+/* Header Text */
 h1 {
     font-size: 1.85rem;
     font-weight: 800;
@@ -187,7 +249,7 @@ h1 {
     padding: 0 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 20px; /* Increased gap */
     align-items: start;
 }
 
@@ -195,20 +257,22 @@ h1 {
 .card {
     background: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border: 2px solid var(--slate-100);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    border: 2px solid var(--slate-200); /* Slightly thicker/darker border for visibility */
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     grid-column: span 1; /* Default to single tile */
     display: flex;
     flex-direction: column;
+    scroll-margin-top: 1rem; /* Ensures space above when scrolled to */
 }
 
 /* Active State: Full Width */
 .card.active {
     grid-column: 1 / -1; /* Span full width */
     border-color: var(--blue);
-    box-shadow: 0 8px 24px rgba(30, 58, 138, 0.15);
+    box-shadow: 0 12px 32px rgba(30, 58, 138, 0.18);
+    transform: scale(1.02); /* Subtle pop */
 }
 
 .accordion-header {
@@ -224,8 +288,8 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 160px; /* Fixed height for squares */
-    padding: 1rem;
+    height: 180px; /* Increased height for larger tap target */
+    padding: 1.5rem;
 }
 
 .accordion-header:active {
@@ -241,6 +305,7 @@ h1 {
     height: auto; /* Natural height */
     padding: 1.5rem;
     border-bottom: 1px solid var(--slate-50);
+    background: var(--light-blue); /* Subtle highlight when open */
 }
 
 .header-left {
@@ -248,7 +313,7 @@ h1 {
     /* Default Tile: Stacked */
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 /* Active Header Left: Row */
@@ -259,39 +324,40 @@ h1 {
 
 .icon-box {
     /* Default Tile: Large Icon */
-    width: 64px;
-    height: 64px;
+    width: 72px; /* Increased size */
+    height: 72px; /* Increased size */
     padding: 0;
     background: var(--light-blue);
     color: var(--blue);
-    border-radius: 16px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+    border: 2px solid transparent;
 }
 
 .icon-box svg {
-    width: 32px;
-    height: 32px;
+    width: 36px; /* Larger icon */
+    height: 36px;
 }
 
 /* Active Icon Box: Smaller */
 .card.active .icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
     background: var(--blue);
     color: var(--white);
 }
 
 .card.active .icon-box svg {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
 }
 
 .header-left span {
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Larger text */
     font-weight: 800;
     color: var(--navy);
     line-height: 1.2;
@@ -322,7 +388,7 @@ h1 {
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.4s ease-out; /* Slower transition */
     background: var(--white);
 }
 
@@ -695,6 +761,12 @@ h1 {
     font-size: 1rem;
     font-weight: 800;
     margin-bottom: 0.75rem;
+}
+
+.green-program-box p, .amenity-request-box p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: var(--slate-800);
 }
 
 .schedule-item {
