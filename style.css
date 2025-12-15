@@ -1,145 +1,433 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // Set current year in footer
-    const yearSpan = document.getElementById('year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
+:root {
+    --baymont-navy: #003B5C;  /* Primary Brand Color */
+    --baymont-blue: #005DA4;  /* Lighter Blue for accents */
+    --baymont-red: #D31145;   /* Brand Accent Color */
+    --warm-white: #FAF9F6;    /* Background */
+    --pure-white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-light: #555555;
+    --border-radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--warm-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 16px;
+    padding-bottom: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header with Baymont Touch */
+.app-header {
+    background: linear-gradient(135deg, var(--baymont-navy) 0%, #002840 100%);
+    color: var(--pure-white);
+    padding: 0;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 1.5rem;
+}
+
+.header-content {
+    padding: 1.5rem 1rem 2rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.baymont-accent-strip {
+    height: 6px;
+    background-color: var(--baymont-red);
+    width: 100%;
+}
+
+.top-info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.date-text { font-weight: 600; display: block; }
+.time-text { font-weight: 400; opacity: 0.9; font-size: 0.8rem; }
+.weather-link { color: white; display: flex; align-items: center; gap: 0.5rem; font-weight: 600; }
+
+.brand-identity h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    margin-top: 0.25rem;
+}
+
+.location-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    font-weight: 600;
+}
+
+.welcome-card {
+    background: var(--pure-white);
+    color: var(--text-dark);
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.welcome-card h2 {
+    color: var(--baymont-navy);
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 1.25rem;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.book-btn {
+    background-color: var(--baymont-red);
+    color: white;
+    font-weight: 700;
+    padding: 0.85rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(211, 17, 69, 0.3);
+}
+
+.gallery-btn {
+    background-color: var(--warm-white);
+    color: var(--baymont-navy);
+    border: 1px solid var(--baymont-navy);
+    font-weight: 700;
+    padding: 0.85rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.review-btn {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--baymont-navy);
+    text-decoration: none;
+}
+
+/* Main Layout */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.main-content {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .main-content {
+        grid-template-columns: 1fr 1fr;
     }
+}
 
-    // --- Date and Time Logic ---
-    function updateDateTime() {
-        const now = new Date();
-        
-        // Date Format: Monday, Oct 24
-        const dateOptions = { weekday: 'long', month: 'short', day: 'numeric' };
-        const dateString = now.toLocaleDateString('en-US', dateOptions);
-        
-        // Time Format: 10:42 AM
-        const timeOptions = { hour: 'numeric', minute: '2-digit', hour12: true };
-        const timeString = now.toLocaleTimeString('en-US', timeOptions);
+/* Accordion Cards */
+.card {
+    background: var(--pure-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+}
 
-        const dateEl = document.getElementById('currentDate');
-        const timeEl = document.getElementById('currentTime');
+.card.active {
+    grid-column: 1 / -1;
+    border-color: var(--baymont-blue);
+    box-shadow: 0 8px 20px rgba(0, 59, 92, 0.1);
+}
 
-        if (dateEl) dateEl.textContent = dateString;
-        if (timeEl) timeEl.textContent = timeString;
-    }
+.accordion-header {
+    width: 100%;
+    background: var(--pure-white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    text-align: left;
+    transition: background 0.2s;
+}
 
-    // Update time every second
-    setInterval(updateDateTime, 1000);
-    updateDateTime(); // Initial call
+.accordion-header:active {
+    background-color: var(--warm-white);
+}
 
-    // --- Weather Logic (Open-Meteo API) ---
-    // Tombstone Coords: 31.7215° N, 110.0684° W
-    const weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=31.7215&longitude=-110.0684&current=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=America%2FPhoenix";
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
-    async function fetchWeather() {
-        const weatherTemp = document.getElementById('weatherTemp');
-        const weatherIcon = document.getElementById('weatherIcon');
+.icon-box {
+    width: 48px;
+    height: 48px;
+    background: #e6f0f7; /* Light Blue */
+    color: var(--baymont-navy);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        try {
-            const response = await fetch(weatherUrl);
-            if (!response.ok) throw new Error('Weather data fetch failed');
-            
-            const data = await response.json();
-            const temp = Math.round(data.current.temperature_2m);
-            const code = data.current.weather_code;
+.icon-box svg {
+    width: 24px;
+    height: 24px;
+}
 
-            // Map WMO codes to simple emojis
-            let icon = '☀️'; // Default sunny
-            if (code >= 1 && code <= 3) icon = '⛅'; // Partly cloudy
-            if (code >= 45 && code <= 48) icon = '🌫️'; // Fog
-            if (code >= 51 && code <= 67) icon = '🌧️'; // Rain
-            if (code >= 71 && code <= 77) icon = '❄️'; // Snow
-            if (code >= 80 && code <= 82) icon = '🌦️'; // Showers
-            if (code >= 95) icon = '⛈️'; // Thunderstorm
+.header-left span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--baymont-navy);
+    font-family: 'Open Sans', sans-serif;
+}
 
-            if (weatherTemp) weatherTemp.textContent = `${temp}°F`;
-            if (weatherIcon) weatherIcon.textContent = icon;
+.chevron {
+    color: #cbd5e1;
+    transition: transform 0.3s;
+}
 
-        } catch (error) {
-            console.log('Weather unavailable (likely offline):', error);
-            if (weatherTemp) weatherTemp.textContent = '--';
-        }
-    }
+.card.active .chevron {
+    transform: rotate(180deg);
+    color: var(--baymont-red);
+}
 
-    // Fetch weather immediately, then every 30 mins
-    fetchWeather();
-    setInterval(fetchWeather, 30 * 60 * 1000);
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: var(--pure-white);
+}
 
+.card.active .accordion-content {
+    max-height: 2000px;
+    border-top: 1px solid #f0f0f0;
+}
 
-    // Accordion functionality for Grid Tiles
-    const accordions = document.querySelectorAll('.accordion');
+.content-wrapper {
+    padding: 1.25rem;
+    color: var(--text-light);
+}
 
-    accordions.forEach(accordion => {
-        const header = accordion.querySelector('.accordion-header');
-        
-        header.addEventListener('click', (e) => {
-            const isActive = accordion.classList.contains('active');
-            
-            // Close all others? (Optional - user requested "buttons to scroll down", likely implies a fresh navigation feel)
-            // For older users, keeping one open at a time is often less confusing.
-            accordions.forEach(acc => {
-                if (acc !== accordion) {
-                    acc.classList.remove('active');
-                    const h = acc.querySelector('.accordion-header');
-                    if (h) h.setAttribute('aria-expanded', 'false');
-                }
-            });
+/* Inner Sections */
+.wifi-box {
+    background: #e6f0f7;
+    border-left: 4px solid var(--baymont-blue);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
 
-            // Toggle Current
-            if (isActive) {
-                accordion.classList.remove('active');
-                header.setAttribute('aria-expanded', 'false');
-            } else {
-                accordion.classList.add('active');
-                header.setAttribute('aria-expanded', 'true');
-                
-                // Scroll into view logic
-                // Small timeout allows the CSS transition (expansion) to start so the browser can calculate the new position better
-                setTimeout(() => {
-                    accordion.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 300);
-            }
-        });
-    });
+.wifi-label {
+    font-weight: 700;
+    color: var(--baymont-navy);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
 
-    // Scroll to Top functionality
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    
-    if (scrollTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('show');
-            } else {
-                scrollTopBtn.classList.remove('show');
-            }
+.badge {
+    background: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--baymont-navy);
+    border: 1px solid #cbd5e1;
+}
 
-            // Hide scroll hint on scroll
-            const hint = document.getElementById('scrollHint');
-            if (window.scrollY > 50 && hint) {
-                hint.style.opacity = '0';
-            }
-        });
+.grid-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
 
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
+.grid-btn {
+    text-align: center;
+    background: var(--warm-white);
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
 
-    // Navigation Helper (Transient Toast)
-    // Show tip after 1.5s
-    setTimeout(() => {
-        const tip = document.getElementById('interactionTip');
-        if(tip) tip.classList.add('visible');
-    }, 1500);
+.grid-label { font-size: 0.75rem; text-transform: uppercase; color: #666; font-weight: 700; display: block; }
+.grid-value { font-size: 1.1rem; font-weight: 700; color: var(--baymont-navy); display: block; }
 
-    // Hide tip after 5.5s
-    setTimeout(() => {
-        const tip = document.getElementById('interactionTip');
-        if(tip) tip.classList.remove('visible');
-    }, 5500);
-});
+.tip-group h4 {
+    color: var(--baymont-red);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Merriweather', serif;
+}
+
+.tip-group ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.tip-group li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid #e5e5e5;
+}
+
+/* Amenity Grid */
+.amenity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.amenity-item {
+    background: var(--warm-white);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--baymont-navy);
+    border: 1px solid #eee;
+}
+
+.amenity-item.link-item {
+    background: white;
+    border: 1px solid var(--baymont-blue);
+    color: var(--baymont-blue);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Sticky Bar */
+.sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #ddd;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    z-index: 100;
+}
+
+.call-btn {
+    background: var(--baymont-red);
+    color: white;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 10px rgba(211, 17, 69, 0.4);
+}
+
+.simple-list li {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #eee;
+    font-size: 0.95rem;
+}
+
+.beer-box {
+    background: #fff5f5; /* Light red tint */
+    border: 1px solid #fed7d7;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.beer-box h5 { color: var(--baymont-navy); font-size: 1rem; margin-bottom: 0.2rem; }
+.beer-box p { font-size: 0.85rem; color: #555; }
+.beer-box .icon { font-size: 1.5rem; }
+
+.tour-btn-text {
+    background: rgba(255,255,255,0.95);
+    color: var(--baymont-navy);
+    font-weight: 800;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+.virtual-tour-card {
+    height: 200px;
+    background: #ddd url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1000') center/cover;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tour-link-overlay {
+    text-decoration: none;
+    display: block;
+}
