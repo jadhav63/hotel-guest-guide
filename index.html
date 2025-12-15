@@ -26,6 +26,21 @@
     <header class="app-header">
         <div class="header-bg-decoration"></div>
         <div class="container">
+            
+            <!-- Date, Time & Weather Bar -->
+            <div class="top-info-bar">
+                <div class="date-time-box">
+                    <span id="currentDate" class="date-text">Loading...</span>
+                    <span id="currentTime" class="time-text"></span>
+                </div>
+                <div id="weatherBox" class="weather-box">
+                    <a href="https://www.google.com/search?q=weather+tombstone+az" target="_blank" class="weather-link">
+                        <span id="weatherIcon">🌤️</span>
+                        <span id="weatherTemp">--°F</span>
+                    </a>
+                </div>
+            </div>
+
             <h1>Tombstone Grand Hotel</h1>
             <p class="subtitle">a Baymont by Wyndham</p>
             
@@ -59,8 +74,8 @@
     <main class="container main-content">
         
         <!-- Essentials Section -->
-        <section class="card accordion active" id="essentials">
-            <button class="accordion-header" aria-expanded="true">
+        <section class="card accordion" id="essentials">
+            <button class="accordion-header" aria-expanded="false">
                 <div class="header-left">
                     <div class="icon-box">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -80,6 +95,9 @@
                             <div class="wifi-details">
                                 <p>Network: <span class="badge">wyndhamwifi</span></p>
                                 <p>Password: <span class="badge">grandhotel</span></p>
+                                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                                    <strong>Issue?</strong> Call <a href="tel:8337463544" style="text-decoration: underline; color: var(--blue);">833-746-3544</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -103,7 +121,7 @@
             </div>
         </section>
 
-        <!-- Room Help & Quick Fixes (NEW SECTION) -->
+        <!-- Room Help & Quick Fixes -->
         <section class="card accordion">
             <button class="accordion-header" aria-expanded="false">
                 <div class="header-left">
@@ -307,20 +325,13 @@
                 <div class="content-wrapper">
                     <div class="green-program-box">
                         <h4>Wyndham Green Program</h4>
-                        <div class="service-schedule">
-                            <div class="schedule-item">
-                                <span class="schedule-day">Daily</span>
-                                <span class="schedule-desc"><strong>Light Service:</strong> Trash, towels, replenishment.</span>
-                            </div>
-                            <div class="schedule-item">
-                                <span class="schedule-day">Day 3</span>
-                                <span class="schedule-desc"><strong>Full Service:</strong> Cleaning, vacuuming, linens.</span>
-                            </div>
-                        </div>
+                        <p>We are proud to participate in the Wyndham Green Program to support environmental sustainability. We offer full housekeeping service every <strong>3rd day</strong> of your stay.</p>
+                        <p><strong>Need service sooner?</strong> Please let the Front Desk know before you head out for the day, and we will be happy to service your room.</p>
                     </div>
                     
                     <div class="amenity-request-box">
                         <h4>Need Additional Items?</h4>
+                        <p>During your stay, if you need anything extra like towels, blankets, or toiletries, please let us know.</p>
                         <div class="amenity-grid small">
                             <div class="amenity-item">Towels</div>
                             <div class="amenity-item">Toiletries</div>
@@ -458,20 +469,60 @@
             </button>
             <div class="accordion-content">
                 <div class="content-wrapper">
+                    
                     <div class="contact-row">
                         <div class="contact-icon">📞</div>
                         <div>
-                            <span class="contact-label">Front Desk Direct</span>
+                            <span class="contact-label">Front Desk</span>
                             <a href="tel:5204579507" class="contact-val">520-457-9507</a>
                         </div>
                     </div>
+                    
+                    <div class="contact-row">
+                        <div class="contact-icon">👔</div>
+                        <div>
+                            <span class="contact-label">Manager</span>
+                            <span class="contact-val">Ext. 411</span>
+                        </div>
+                    </div>
+
                     <div class="contact-row">
                         <div class="contact-icon">✉️</div>
                         <div>
-                            <span class="contact-label">Email</span>
-                            <a href="mailto:reservations@tombstonegrand.com" class="contact-val email">reservations@tombstonegrand.com</a>
+                            <span class="contact-label">Front Desk Email</span>
+                            <a href="mailto:frontofficetgh@salinvestment.com" class="contact-val email">frontofficetgh@salinvestment.com</a>
                         </div>
                     </div>
+
+                    <div class="contact-row">
+                        <div class="contact-icon">👤</div>
+                        <div>
+                            <span class="contact-label">General Manager</span>
+                            <a href="mailto:58835@bywyndham.com" class="contact-val email">58835@bywyndham.com</a>
+                            <a href="tel:4807388056" class="contact-val" style="display:block; margin-top: 0.25rem; font-size: 1rem;">Cell: 480-738-8056</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-row">
+                        <div class="contact-icon">🏆</div>
+                        <div>
+                            <span class="contact-label">Wyndham Rewards</span>
+                            <a href="tel:18004661589" class="contact-val">1-800-466-1589</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <span class="contact-label">Address</span>
+                            <p class="contact-val" style="font-size: 1rem; line-height: 1.4;">
+                                580 W Allen St<br>
+                                PO Box 1730<br>
+                                Tombstone, AZ 85638
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
